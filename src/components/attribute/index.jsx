@@ -47,14 +47,14 @@ function ItemsCard() {
             </div>
           </div>
         </div>
-        <span className=" animation_bg xl:h-24 lg:h-12 md:h-10 sm:h-6">
-          <div className="xl:w-56 xl:h-56 w-32 h-32 absolute bg-no-repeat bg-cover bg-ellipse1 lg:top-[950px] lg:left-[-750px] xl:top-[600%] xl:left-[-300px] md:top-[1470px] md:left-[-600px] top-[1500px] left-[-520px]"></div>
+        <span className="animate-bounce animation_bg">
+          <div className="xl:w-56 xl:h-56 w-32 h-12 absolute bg-no-repeat bg-cover bg-ellipse1 xl:top-[830px] xl:left-[-1100px] top-[-10%] left-[4%]"></div>
         </span>
-        <span className="animation_bg xl:h-24 lg:h-12 md:h-10 sm:h-6">
-          <div className="xl:w-56 xl:h-56 w-32 h-32 absolute bg-no-repeat bg-cover bg-ellipse2 lg:top-[570px] lg:left-[-750px] xl:top-[830px] xl:left-[-1100px] md:top-[780px] md:left-[-550px] top-[800px] left-[-470px]"></div>
+        <span className="animation_bg">
+          <div className="xl:w-56 xl:h-56 w-32 h-32 absolute bg-no-repeat bg-cover bg-ellipse2 xl:top-[310%] xl:left-[-1500px] top-[30%] left-[30%]"></div>
         </span>
-        <span className="animation_bg xl:h-24 lg:h-12 md:h-10 sm:h-6">
-          <div className="xl:w-56 xl:h-56 w-32 h-32 absolute bg-no-repeat bg-cover bg-ellipse3 lg:top-[300px] lg:left-[-1000px] xl:top-[310%] xl:left-[-1500px] md:top-[300px] md:left-[-765px] top-[300px] xl:right-[6%] right-[500px]"></div>
+        <span className="animation_bg">
+          <div className="xl:w-56 xl:h-56 w-32 h-32 absolute bg-no-repeat bg-cover bg-ellipse3 xl:top-[600%] top-[70%] xl:right-[6%] right-[60%]"></div>
         </span>
       </section>
     </React.Fragment>
