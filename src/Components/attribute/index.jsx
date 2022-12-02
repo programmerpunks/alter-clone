@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect } from "react";
+import Aos from "aos";
 import SingleItemCard from "./attributeItem";
 const item1 = require("../../images/attribute/item1.svg").default;
 const item2 = require("../../images/attribute/item2.svg").default;
@@ -8,16 +10,19 @@ const paragraph =
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vitae quae dolorum veritatis quidem officiis, sequi qui autem voluptates tenetur!";
 
 function ItemsCard() {
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
+
   return (
     <React.Fragment>
-      <section className="section overflow-hidden relative flex justify-center">
-        <div>
-          <div>
+      <section className="section overflow-hidden relative flex justify-center" data-aos="fade-up">
+        <div >
             <h4 className="lg:mb-28 mb-12 mt-28 2xl:text-[80px] md:text-4xl text-white lg:text-5xl text-3xl font-bold text-center font-poppins ">
               What makes Alter unique
             </h4>
 
-            <div className="relative container">
+            <div className="relative container" >
               <div className="grid grid-cols-12 w-full lg:gap-5">
                 <SingleItemCard
                   varImage={item1}
@@ -44,7 +49,6 @@ function ItemsCard() {
                   para={paragraph}
                 />
               </div>
-            </div>
           </div>
         </div>
         <span className="animate-bounce animation_bg">

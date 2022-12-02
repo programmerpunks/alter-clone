@@ -1,11 +1,17 @@
 import React from "react";
+import { useEffect } from "react";
+import Aos from "aos";
 import SingleOverviewCartItem from "./overviewItem";
 const overItem = require("../../images/overview/overviewItem.png");
 
 function OverviewCard() {
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
+
   return (
     <React.Fragment>
-      <div className="flex justify-center mt-20  bg-cosmic cosmic_bg p-10">
+      <div className="flex justify-center mt-20  bg-cosmic cosmic_bg p-10" data-aos="fade-up">
         <section className="p-20 overflow-hidden relative bg-slate-300 bg-opacity-30 rounded-[55px] mt-20 flex justify-center">
           <div className="container">
             <h4 className="2xl:text-[80px] md:text-4xl lg:text-5xl text-3xl font-bold text-center text-white">

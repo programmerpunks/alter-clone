@@ -7,7 +7,7 @@ const foreground = require("../../images/landing/Heroforeground.png");
 function LandingSection() {
   return (
     <React.Fragment>
-      <section className="section overflow-hidden relative block mb-20">
+      <section className="section overflow-hidden relative block mb-20" id="header">
         <div>
           <div className="lg:min-h-[130vh] min-h-[110vh] !overflow-visible w-screen flex justify-center items-center">
             <div className="absolute top-[25%] z-40">

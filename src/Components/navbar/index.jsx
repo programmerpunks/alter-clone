@@ -12,9 +12,9 @@ function Navbar() {
   };
   return (
     <>
-        <header className="text-black flex w-full backdrop-blur-[80px] h-24 items-center z-50 justify-between fixed" id="header">
+        <header className="text-black flex w-full backdrop-blur-[80px] h-24 items-center z-50 justify-between fixed" >
           <div className="container max-w-full flex-wrap px-16 flex-col md:flex-row items-center flex ">
-            <a href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <a href="#header" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
               <span className="ml-3 text-black text-xl">
                 <img src={logo} alt="/" />
               </span>
