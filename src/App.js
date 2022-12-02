@@ -5,12 +5,12 @@ import Team from "./Components/Team";
 
 import { BrowserRouter } from "react-router-dom";
 import { TeamModal } from "./Components/TeamModal";
-import Navbar from "./components/navbar";
-import LandingSection from "./components/landing";
-import VideoCard from "./components/video";
-import ItemsCard from "./components/attribute";
-import OverviewCard from "./components/overview";
-import Project from "./components/project";
+import Navbar from "./Components/navbar";
+import LandingSection from "./Components/landing";
+import VideoCard from "./Components/video";
+import ItemsCard from "./Components/attribute";
+import OverviewCard from "./Components/overview";
+import Project from "./Components/project";
 
 function App() {
   const [showMyModal, setShowTeamModal] = useState(false);
