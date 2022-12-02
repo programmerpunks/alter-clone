@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.fade_bg{
+    position: relative;
+    background-size: 100% 100%;
+}
+
+
+.cosmic_bg{
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.cosmic_bg::after{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(180deg,#071332 21.92%,rgba(7,19,50,0));
+    content: '';
+}
+
+.fade_bg::after{
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), hwb(0deg 0% 100% / 56%) 100%);
+    content: '';
+
+}
+
+.attribute_bg{
+    background: linear-gradient(138.39deg,hsla(0,0%,100%,.2) -7.57%,rgba(172, 167, 167, 0) 177.25%);
+}
+
+
+.animation_bg{
+    animation: bounce 2s infinite;
+    height: 100px;
+}
