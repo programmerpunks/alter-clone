@@ -1,5 +1,5 @@
 import React from "react";
-import {  useEffect } from "react";
+import { useEffect } from "react";
 import Aos from "aos";
 import ProjectCartItem from "./projectItem";
 const projectItem = require("../../images/project/projectItem1.png");
@@ -11,16 +11,21 @@ function Project() {
   }, []);
   return (
     <React.Fragment>
-      <section className="overflow-hidden relative  mt-40 flex justify-center bg-incoming incoming_bg" data-aos="fade-up">
+      <section
+        className="overflow-hidden relative  mt-40 flex justify-center bg-incoming incoming_bg"
+        data-aos="fade-up"
+      >
         <div className="container">
           <div></div>
           <div className="grid grid-cols-12 xl:gap-10 section mb-20">
             <ProjectCartItem
+              data="fade-right"
               picture={projectItem}
               title={"Buddies"}
               btnTitle={"View on OpenSea"}
             />
             <ProjectCartItem
+              data="fade-left"
               picture={projectItem2}
               title={"NEXUS World Land"}
               btnTitle={"COMING SOON"}
