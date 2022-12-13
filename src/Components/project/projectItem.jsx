@@ -1,9 +1,16 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 function ProjectCartItem(props) {
   return (
     <React.Fragment>
-      <div className=" col-span-12 xl:col-span-6 my-10 xl:my-0 2xl:h-[780px] xl:h-[650px] h-auto relative bg-slate-300 rounded-[55px] bg-opacity-30">
+      <motion.div
+        whileHover={{
+          scale: 0.9,
+        }}
+        className=" col-span-12 xl:col-span-6 my-10 xl:my-0 2xl:h-[780px] xl:h-[650px] h-auto relative bg-slate-300 rounded-[55px] bg-opacity-30"
+        data-aos={props.data}
+        data-aos-duration="900"
+      >
         <div className="flex w-full h-[45%]">
           <div className="w-full flex justify-content items-center">
             <img
@@ -40,7 +47,7 @@ function ProjectCartItem(props) {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </React.Fragment>
   );
 }
