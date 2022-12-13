@@ -9,9 +9,7 @@ const Team = (props) => {
     1,
     TeamMemberDetail.length + 1
   );
-  useEffect(() => {
-    Aos.init({ duration: 3000 });
-  }, []);
+
   return (
     <>
       <h1
@@ -21,13 +19,14 @@ const Team = (props) => {
         <div>OUR TEAM</div>
       </h1>
       <div className="flex justify-center bg-[#002952] pb-12">
-        <div className="relative container" data-aos="fade-up">
+        <div className="relative container">
           <TeamCard
             type="video"
-            class="lg:w-1/2 px-4 py-7 w-full"
+            classname="lg:w-1/2 px-4 py-7 w-full"
             team_members={TeamMemberDetail[0]}
             button={props.button}
             enableModal={props.enableModal}
+            data="fade-zoom-in"
           />
           <div className="grid grid-cols-12 w-full md:gap-4 gap-7 px-4">
             {members_with_image_display.map((team_member) => {
@@ -37,6 +36,7 @@ const Team = (props) => {
                   team_members={team_member}
                   button={props.button}
                   enableModal={props.enableModal}
+                  data="flip-left"
                 />
               );
             })}

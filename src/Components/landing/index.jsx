@@ -19,10 +19,10 @@ function LandingSection() {
             <div className="absolute top-[25%] z-40">
               <h1 className="text-center 2xl:text-5xl md:text-3xl lg:text-4xl text-2xl text-floralWhite my-3 font-poppins text-white font-black">
                 <ScrollPage>
-                  <Animator animation={Move(0, 0, 0, 600)}>
+                  <Animator animation={Move(0, 0, 0, 800)}>
                     <p>Reimagine a Play-and-Earn Metaverse</p>
                   </Animator>
-                  <Animator animation={Move(0, 0, 0, 600)}>
+                  <Animator animation={Move(0, 0, 0, 800)}>
                     <p className="2xl:text-[22px] lg:text-[18px] text-base font-poppins text-white text-floralWhite text-center font-medium font-primary drop-shadow-2xl z-500 relative max-w-xs md:max-w-2xl mx-auto md:px-0 px-5 leading-snug pt-4">
                       where the virtual and real world converge
                     </p>
@@ -30,9 +30,6 @@ function LandingSection() {
                 </ScrollPage>
               </h1>
             </div>
-            <ScrollPage className="absolute top-0 left-0 z-30 w-full h-[20%] object-cover">
-              <Animator animation={Move(0, 0, 0, 500)}></Animator>
-            </ScrollPage>
 
             <img
               src={city}
@@ -41,17 +38,11 @@ function LandingSection() {
             />
             <div className="top-[30%] -left-[0px] z-20 lg:h-screen h-full w-full absolute object-center object-cover hidden md:block">
               <ScrollPage>
-                <Animator animation={Move(0, 0, 0, 200)}>
+                <Animator animation={Move(0, 0, 0, 800)}>
                   <img src={background} alt="/" />
                 </Animator>
               </ScrollPage>
             </div>
-
-            {/* <img
-              src={background}
-              alt="/"
-              className="top-[30%] left-0 z-20 lg:h-screen h-full w-full absolute object-center object-cover hidden md:block"
-            /> */}
             <img
               src={background_sm}
               alt="/"
