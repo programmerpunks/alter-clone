@@ -1,12 +1,11 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react"
+
 const logo = require("../../images/navbar/logo.svg").default;
 const menu = require("../../images/navbar/menu.svg").default;
 const rightArrow = require("../../images/navbar/rightarrow.svg").default;
 
 function Navbar() {
   const [nav, setNav] = useState(false);
-
   const handleNav = () => {
     setNav(!nav);
   };
@@ -41,7 +40,8 @@ function Navbar() {
             <img src={menu} alt="/" />
           </div>
         </header>
-        {nav ? (
+
+        {nav && (
           <header className="text-black flex w-full h-full lg:hidden items-center z-50 justify-between fixed ">
           <div className="fixed left-0 top-0 w-full z-60 backdrop-blur-[80px] ease-in-out duration-500">
             <div className="flex justify-between items-center m-5">
@@ -69,7 +69,7 @@ function Navbar() {
             </ul>
           </div>
         </header>
-      ) : ''}
+      ) }
     </>
   );
 }

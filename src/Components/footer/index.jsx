@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
-import Email from "./Email";
-import logo from "../images/logo.svg";
 import Aos from "aos";
+import React, { useEffect } from "react";
+
+import Email from "./Email";
+import { Emails } from "./EmailLinks";
+import logo from "../../images/footer/logo.svg";
+
 import "aos/dist/aos.css";
-import { Emails } from "../Emails";
 
 const Footer = () => {
   useEffect(() => {

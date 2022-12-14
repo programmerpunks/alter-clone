@@ -1,16 +1,19 @@
-import React from "react";
-import { useState, useEffect } from "react";
 import Aos from "aos";
-const videoThumbnail = require("../../images/video/nexusVideo.jpg");
+import React, { useEffect, useState } from "react";
+
 const playButton = require("../../images/video/play_white.svg").default;
+const videoThumbnail = require("../../images/video/nexusVideo.jpg");
+
 function VideoCard() {
+
   const [play, setPlay] = useState(true);
   const playVideo = () => setPlay(!play);
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
+  
   return (
-    <React.Fragment>
+    <>
       <div className="flex justify-center bg-universe-foreground bg-no-repeat fade_bg"  data-aos="fade-up">
         <section className="relative bg-slate-300 rounded-[55px] bg-opacity-30 w-2/3">
           <div className="rounded-large container-fluid m-4 mt-5 p-10">
@@ -46,13 +49,12 @@ function VideoCard() {
                     src="https://www.youtube.com/embed/r9jwGansp1E?autoplay=1&mute=1"
                   ></iframe>
                 )}
-                <div></div>
               </div>
             </div>
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 
