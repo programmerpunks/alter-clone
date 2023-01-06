@@ -4,7 +4,7 @@ import SocialLink from "./SocialLink";
 import Aos from "aos";
 const TeamCard = (props) => {
   useEffect(() => {
-    Aos.init({ duration: 3000 });
+    Aos.init({ duration: 5000 });
   }, []);
   const imageClass = `${props.class} h-fit`;
   return (
