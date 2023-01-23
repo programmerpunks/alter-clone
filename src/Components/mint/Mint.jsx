@@ -93,7 +93,9 @@ function Mint() {
           value: ethers.utils.parseEther((price * mintAmount).toString()),
         });
         await response.wait();
-        notify("Transaction Successful.");
+        toast.success("Transaction Successful.", {
+          toastId: customId,
+        });
         setCheck(!check);
       } catch (error) {
         setCheck(!check);
@@ -220,7 +222,7 @@ function Mint() {
         <h4 className="text-white text-center font-bold text-3xl">
           Remaining minting:{maxMintAmount - userMintedAmount}
         </h4>
-        <div className="text-white justify-center px-10 py-10 grid text-center lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+        <div className="text-white justify-center px-10 py-10 grid text-center lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
           {images.map((url, key) => {
             return (
               <div key={key} className="border border-md">
