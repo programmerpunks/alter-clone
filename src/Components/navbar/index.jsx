@@ -5,7 +5,18 @@ const logo = require("../../images/navbar/logo.svg").default;
 const menu = require("../../images/navbar/menu.svg").default;
 const rightArrow = require("../../images/navbar/rightarrow.svg").default;
 
-function Navbar() {
+function Navbar({
+  wallet,
+  logout,
+  disconnect,
+  setUserMintedAmount,
+  setMaxMintAmount,
+  setPrice,
+  setImages,
+  connection,
+  readContract,
+  getTokens,
+}) {
   const [nav, setNav] = useState(false);
   const navigate = useNavigate();
   const handleNav = () => {
@@ -47,15 +58,31 @@ function Navbar() {
             </a>
             <button
               type="button"
-              className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium text-lg rounded-[55px] px-16 py-5 text-center  duration-700 hover:scale-110"
+              className={`text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl hover:content-['Hello'] focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium text-sm rounded-[55px] px-2 py-5 text-center  duration-700 hover:scale-110 ${
+                logout ? "hover:before:content-['Disconnect:\\_']" : ""
+              }`}
               onClick={() => {
-                navigate("/mint");
+                logout
+                  ? (async function () {
+                      await disconnect();
+                      await setUserMintedAmount("-");
+                      await setMaxMintAmount("-");
+                      await setPrice("-");
+                      await setImages([]);
+                    })()
+                  : (async function () {
+                      await connection();
+                      await readContract();
+                      await getTokens();
+                      navigate("/mint");
+                    })();
               }}
             >
-              Buy Land
+              {wallet}
             </button>
           </nav>
         </div>
+
         <div onClick={handleNav} className="block lg:hidden m-5">
           <img src={menu} alt="/" />
         </div>
