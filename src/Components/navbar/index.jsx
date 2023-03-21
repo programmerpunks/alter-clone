@@ -1,27 +1,26 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 const logo = require("../../images/navbar/logo.svg").default;
 const menu = require("../../images/navbar/menu.svg").default;
 const rightArrow = require("../../images/navbar/rightarrow.svg").default;
 
 function Navbar({
-  wallet,
-  logout,
-  disconnect,
-  setUserMintedAmount,
-  setMaxMintAmount,
-  setPrice,
-  setImages,
   connection,
-  readContract,
+  disconnect,
   getTokens,
+  logout,
+  readContract,
+  wallet,
 }) {
   const [nav, setNav] = useState(false);
+
   const navigate = useNavigate();
+
   const handleNav = () => {
     setNav(!nav);
   };
+
   return (
     <>
       <header className="text-black flex w-full backdrop-blur-[80px] h-24 items-center z-50 justify-between fixed">
@@ -65,10 +64,6 @@ function Navbar({
                 logout
                   ? (async function () {
                       await disconnect();
-                      await setUserMintedAmount("-");
-                      await setMaxMintAmount("-");
-                      await setPrice("-");
-                      await setImages([]);
                     })()
                   : (async function () {
                       await connection();

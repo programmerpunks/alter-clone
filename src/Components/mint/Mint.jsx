@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { ethers } from "ethers";
+import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 
 import { ContractABI } from "./contract";
+
+import "react-toastify/dist/ReactToastify.css";
+
 const background = require("../../images/landing/Herobackground.png");
 
 function Mint({
-  wallet,
-  price,
-  images,
-  userMintedAmount,
-  maxMintAmount,
-  disconnect,
   connection,
-  readContract,
+  disconnect,
   getTokens,
+  images,
+  maxMintAmount,
+  price,
+  readContract,
+  userMintedAmount,
+  wallet,
 }) {
   const [check, setCheck] = useState(false);
+
   const customId = "custom-id-yes";
+
   const notify = (message) => {
     toast.error(message, {
       toastId: customId,
@@ -79,13 +83,14 @@ function Mint({
       });
     }
   });
-  const initialFun = async () => {
-    await connection();
-    await readContract();
-    await getTokens();
-  };
+
   useEffect(() => {
-    initialFun();
+    const initialFunction = async () => {
+      setTimeout(async () => {
+        await getTokens();
+      }, [2000]);
+    };
+    initialFunction();
   }, []);
 
   return (
