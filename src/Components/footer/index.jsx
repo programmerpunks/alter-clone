@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
-import Email from "./Email";
-import logo from "../images/logo.svg";
 import Aos from "aos";
+import React, { useEffect } from "react";
+
+import Email from "./Email";
+import { Emails } from "./EmailLinks";
+import logo from "../../images/footer/logo.svg";
+
 import "aos/dist/aos.css";
-import { Emails } from "../Emails";
-import { motion } from "framer-motion";
+
 const Footer = () => {
   useEffect(() => {
     Aos.init({ duration: 3000 });
@@ -17,22 +19,16 @@ const Footer = () => {
             return <Email email={email} />;
           })}
         </div>
-        <motion.div
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
+        <div
           data-aos="fade-up"
           className=" bg-[#b946b9] bg-opacity-20 py-5 mt-10 rounded-3xl md:rounded-3xl sm:mx-[2%] md:mx-[5%] lg:flex lg:px-10"
         >
-          <motion.div
-            whileHover={{ scale: 1.2 }}
-            className="justify-center flex py-12"
-          >
+          <div className="justify-center flex py-12">
             <a href="#header">
               <img className=" md:mb-1" src={logo} alt="" />
             </a>
-          </motion.div>
-          <motion.div className="md:flex font-bold text-lg md:text-base md:space-x-6 md:justify-center lg:grid lg:grid-cols-6 lg:ml-auto lg:my-auto text-center">
+          </div>
+          <div className="md:flex font-bold text-lg md:text-base md:space-x-6 md:justify-center lg:grid lg:grid-cols-6 lg:ml-auto lg:my-auto text-center">
             <a href="#header">
               <p className="pb-6 lg:py-9 hover:text-red-600">OVERVIEW</p>
             </a>
@@ -43,8 +39,8 @@ const Footer = () => {
             <p className="pb-6 lg:py-9 hover:text-red-600">WHITEPAPER</p>
             <p className="pb-6 lg:py-9 hover:text-red-600">LEGAL</p>
             <p className="pb-6 lg:py-9 hover:text-red-600">PITCH</p>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </>
   );

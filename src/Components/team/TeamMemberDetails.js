@@ -1,4 +1,4 @@
-import person_1 from "./images/fahad.jpg";
+import person_1 from "../../images/team/fahad.jpg";
 export const TeamMemberDetail = [
   {
     name: "Video card",
