@@ -7,15 +7,15 @@ import { toast } from "react-toastify";
 
 import "./App.css";
 import { ContractABI } from "./Components/mint/contract";
-import Footer from "./Components/Footer";
+import Footer from "./Components/footer";
 import ItemsCard from "./Components/attribute";
 import LandingSection from "./Components/landing";
 import Mint from "./Components/mint/Mint";
 import Navbar from "./Components/navbar";
 import OverviewCard from "./Components/overview";
 import Project from "./Components/project";
-import Team from "./Components/Team";
-import { TeamModal } from "./Components/TeamModal";
+import Team from "./Components/team/Team";
+import { TeamModal } from "./Components/team";
 import VideoCard from "./Components/video";
 
 import "react-toastify/dist/ReactToastify.css";
