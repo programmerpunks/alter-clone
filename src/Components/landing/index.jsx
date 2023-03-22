@@ -1,14 +1,15 @@
 import React from "react";
-const city = require("../../images/landing/Herocity.png");
+
 const background = require("../../images/landing/Herobackground.png");
 const background_sm = require("../../images/landing/Herobackground_sm.png");
-const sky = require("../../images/landing/Herosky.png");
+const city = require("../../images/landing/Herocity.png");
 const foreground = require("../../images/landing/Heroforeground.png");
+const sky = require("../../images/landing/Herosky.png");
+
 function LandingSection() {
   return (
-    <React.Fragment>
+    <>
       <section className="section overflow-hidden relative block mb-20" id="header">
-        <div>
           <div className="lg:min-h-[130vh] min-h-[110vh] !overflow-visible w-screen flex justify-center items-center">
             <div className="absolute top-[25%] z-40">
               <h1
@@ -43,9 +44,8 @@ function LandingSection() {
               className="left-0 z-30 absolute w-full 2xl:bottom-[-15%] bottom-[-15%] object-cover lg:h-auto h-full"
             />
           </div>
-        </div>
       </section>
-    </React.Fragment>
+    </>
   );
 }
 

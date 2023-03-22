@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "footer-img": "url('./images/footer.png')",
+        "footer-img": "url('./images/footer/footer.png')",
         "cosmic": "url('./images/background/cosmic.png')",
         "hero-background": "url('./images/landing/Herobackground.png')",
         "hero-background-sm": "url('./images/landing/Herobackground_sm.png')",
