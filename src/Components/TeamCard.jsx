@@ -1,22 +1,11 @@
 import React from "react";
-import { useEffect } from "react";
 import SocialLink from "./SocialLink";
-import Aos from "aos";
+
 const TeamCard = (props) => {
-  useEffect(() => {
-    Aos.init({ duration: 3000 });
-  }, []);
   const imageClass = `${props.class} h-fit`;
   return (
     <>
-      <div
-        data-aos={props.data}
-        data-aos-easing="ease-in-back"
-        data-aos-delay="200"
-        data-aos-offset="0"
-        data-aos-duration="1000"
-        className="col-span-12 md:col-span-6 lg:col-span-4 container mx-auto text-left justify-center"
-      >
+      <div className="col-span-12 md:col-span-6 lg:col-span-4 container mx-auto text-left justify-center">
         <div className={imageClass}>
           {props.type === "video" ? (
             <div>
