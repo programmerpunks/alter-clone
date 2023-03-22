@@ -34,42 +34,6 @@ function App() {
   const { REACT_APP_NETWORK } = process.env;
   const { REACT_APP_NETWORK_CHAIN_ID } = process.env;
 
-  const setDetails = (details) => {
-    setMemberDetail(details);
-  };
-
-  const enableModal = (details) => {
-    setMemberDetail(details);
-    setShowTeamModal(true);
-  };
-
-  const notify = (message) => {
-    toast.error(message, {
-      toastId: "custom-id-yes",
-    });
-  };
-
-  const setupConnections = async () => {
-    if (window.ethereum != null) {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const network = await provider.getNetwork();
-      if (REACT_APP_NETWORK !== network.name) {
-        notify(
-          `Not on a correct network. Change your network to "${REACT_APP_NETWORK}"`
-        );
-        return false;
-      } else {
-        await provider.send("eth_requestAccounts", []);
-        const signer = await provider.getSigner();
-        const address = await signer.getAddress();
-        return address;
-      }
-    } else {
-      notify("No Ether wallet available");
-      return false;
-    }
-  };
-
   const connection = async () => {
     const res = await setupConnections();
     if (res === false) {
@@ -91,6 +55,11 @@ function App() {
     setMaxMintAmount("-");
     setPrice("-");
     setImages([]);
+  };
+
+  const enableModal = (details) => {
+    setMemberDetail(details);
+    setShowTeamModal(true);
   };
 
   const getTokens = async () => {
@@ -117,6 +86,12 @@ function App() {
     }, [2000]);
   };
 
+  const notify = (message) => {
+    toast.error(message, {
+      toastId: "custom-id-yes",
+    });
+  };
+
   const readContract = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const contract = new ethers.Contract(
@@ -132,6 +107,31 @@ function App() {
     setMaxMintAmount(parseInt(maxMintAmount, 10));
     setUserMintedAmount(parseInt(userMintedAmount, 10));
     setPrice(Number(ethers.utils.formatEther(price)));
+  };
+
+  const setDetails = (details) => {
+    setMemberDetail(details);
+  };
+
+  const setupConnections = async () => {
+    if (window.ethereum != null) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const network = await provider.getNetwork();
+      if (REACT_APP_NETWORK !== network.name) {
+        notify(
+          `Not on a correct network. Change your network to "${REACT_APP_NETWORK}"`
+        );
+        return false;
+      } else {
+        await provider.send("eth_requestAccounts", []);
+        const signer = await provider.getSigner();
+        const address = await signer.getAddress();
+        return address;
+      }
+    } else {
+      notify("No Ether wallet available");
+      return false;
+    }
   };
 
   return (

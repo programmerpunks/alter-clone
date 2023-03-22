@@ -1,9 +1,9 @@
 import React from "react";
-import { Animator, ScrollPage, Move } from "react-scroll-motion";
+import { Animator, Move, ScrollPage } from "react-scroll-motion";
 
-const city = require("../../images/landing/Herocity.png");
 const background = require("../../images/landing/Herobackground.png");
 const background_sm = require("../../images/landing/Herobackground_sm.png");
+const city = require("../../images/landing/Herocity.png");
 const foreground = require("../../images/landing/Heroforeground.png");
 const sky = require("../../images/landing/Herosky.png");
 
