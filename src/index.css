@@ -39,6 +39,6 @@
 
 
 .animation_bg{
-    animation: bounce 2s infinite;
+    animation: bounce 0.7s infinite;
     height: 100px;
 }

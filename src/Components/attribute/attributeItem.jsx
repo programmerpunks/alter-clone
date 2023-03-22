@@ -1,15 +1,20 @@
 import React from "react";
+import "aos/dist/aos.css";
+
 function SingleItemCard(props) {
   return (
     <React.Fragment>
-      <div className="col-span-12 lg:col-span-6 backdrop-blur-[60px] backdrop-slate-300 attribute_bg rounded-[55px]   2xl:min-h-[450px] px-5 z-10 my-10 xl:my-5">
+      <div
+        data-aos="fade-right"
+        className="col-span-12 lg:col-span-6 backdrop-blur-[60px] backdrop-slate-300 attribute_bg rounded-[55px]   2xl:min-h-[450px] px-5 z-10 my-10 xl:my-5"
+      >
         <div>
           <img
             width="177"
             height="200"
             loading="lazy"
             src={props.varImage}
-            alt = "/"
+            alt="/"
             className=" transform -translate-y-1/4 mx-auto"
           />
         </div>
@@ -22,7 +27,7 @@ function SingleItemCard(props) {
             </p>
           </div>
           <p className="text-center my-4 2xl:text-[20px] md:text-lg text-base text-gray leading-[34px] font-poppins text-[#94A0BD] ">
-          {props.para}
+            {props.para}
           </p>
         </div>
       </div>
