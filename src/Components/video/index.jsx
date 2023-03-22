@@ -11,13 +11,10 @@ function VideoCard() {
   }, []);
   return (
     <React.Fragment>
-      <div
-        className="flex flex-col-1 justify-center bg-universe-foreground bg-no-repeat fade_bg"
-        data-aos="fade-up"
-      >
+      <div className="flex justify-center bg-universe-foreground bg-no-repeat fade_bg"  data-aos="fade-up">
         <section className="relative bg-slate-300 rounded-[55px] bg-opacity-30 w-2/3">
           <div className="rounded-large container-fluid m-4 mt-5 p-10">
-            <h4 className="2xl:text-[80px] md:text-4xl lg:text-5xl text-3xl font-bold text-center text-white mb-5 font-poppins">
+            <h4 className="2xl:text-[80px] md:text-4xl lg:text-5xl text-3xl font-bold text-center text-white mb-5 font-poppins" >
               Video
             </h4>
             <div className="rounded-big overflow-hidden 2xl:h-[650px] xl:h-[500x] lg:h-[450px] md:h-[400px] h-[300px] p-5">

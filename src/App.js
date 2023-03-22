@@ -11,7 +11,7 @@ import VideoCard from "./Components/video";
 import ItemsCard from "./Components/attribute";
 import OverviewCard from "./Components/overview";
 import Project from "./Components/project";
-import { ScrollContainer } from "react-scroll-motion";
+
 function App() {
   const [showMyModal, setShowTeamModal] = useState(false);
   const [memberDetails, setMemberDetail] = useState({});
@@ -23,28 +23,26 @@ function App() {
     setShowTeamModal(true);
   };
   return (
-    <ScrollContainer>
-      <BrowserRouter>
-        <div className="App">
-          <React.Fragment>
-            <Navbar />
-            <LandingSection />
-            <VideoCard />
-            <ItemsCard />
-            <OverviewCard />
-            <Project />
-          </React.Fragment>
-          <Team setDetails={setDetails} enableModal={enableModal} />
-          <Footer />
-          {showMyModal && (
-            <TeamModal
-              closeModal={setShowTeamModal}
-              memberDetails={memberDetails}
-            />
-          )}
-        </div>
-      </BrowserRouter>
-    </ScrollContainer>
+    <BrowserRouter>
+      <div className="App">
+        <React.Fragment>
+          <Navbar />
+          <LandingSection />
+          <VideoCard />
+          <ItemsCard />
+          <OverviewCard />
+          <Project />
+        </React.Fragment>
+        <Team setDetails={setDetails} enableModal={enableModal} />
+        <Footer />
+        {showMyModal && (
+          <TeamModal
+            closeModal={setShowTeamModal}
+            memberDetails={memberDetails}
+          />
+        )}
+      </div>
+    </BrowserRouter>
   );
 }
 
