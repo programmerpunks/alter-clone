@@ -9,7 +9,9 @@ const Team = (props) => {
     1,
     TeamMemberDetail.length + 1
   );
-
+  useEffect(() => {
+    Aos.init({ duration: 5000 });
+  });
   return (
     <>
       <h1

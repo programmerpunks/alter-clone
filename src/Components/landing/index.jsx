@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useScroll } from "framer-motion";
+// import { motion, useScroll } from "framer-motion";
 import { Animator, ScrollPage, Move } from "react-scroll-motion";
 const city = require("../../images/landing/Herocity.png");
 const background = require("../../images/landing/Herobackground.png");
@@ -7,7 +7,7 @@ const background_sm = require("../../images/landing/Herobackground_sm.png");
 const sky = require("../../images/landing/Herosky.png");
 const foreground = require("../../images/landing/Heroforeground.png");
 function LandingSection() {
-  const { scrollYProgress } = useScroll();
+  // const { scrollYProgress } = useScroll();
   return (
     <React.Fragment>
       <section

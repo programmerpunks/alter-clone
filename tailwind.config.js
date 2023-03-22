@@ -19,6 +19,7 @@ module.exports = {
         ellipse1: "url('./images/ellipse/ellipse-1.png')",
         ellipse2: "url('./images/ellipse/ellipse-2.png')",
         ellipse3: "url('./images/ellipse/ellipse-3.png')",
+        minting: "url('./images/landing/Herobackground_sm.png')",
       },
     },
     fontFamily: {
