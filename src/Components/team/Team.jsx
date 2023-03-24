@@ -5,7 +5,7 @@ import SocialLinks from "./SocialLinks";
 import TeamCard from "./TeamCard";
 import { TeamMemberDetail } from "./TeamMemberDetails";
 
-const Team = ({ enableModal}) => {
+const Team = ({ enableModal }) => {
   const members_with_image_display = TeamMemberDetail.slice(
     1,
     TeamMemberDetail.length + 1

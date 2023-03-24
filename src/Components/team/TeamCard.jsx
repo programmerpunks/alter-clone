@@ -1,7 +1,7 @@
 import React from "react";
 import SocialLink from "./SocialLink";
 
-const TeamCard = ({ clas, enableModal, team_members, type}) => {
+const TeamCard = ({ clas, enableModal, team_members, type }) => {
   const imageClass = `${clas} h-fit`;
   return (
     <>

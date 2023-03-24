@@ -11,6 +11,7 @@ const Footer = () => {
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
+
   return (
     <>
       <div className="text-white bg-footer-img bg-no-repeat py-14 bg-cover ">
