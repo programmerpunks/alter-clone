@@ -2,7 +2,7 @@ import Aos from "aos";
 import React from "react";
 import { useEffect } from "react";
 
-import { AttributeDetails } from "./AttributeDetails";
+import { AttributeDetails } from "../../content/attribute";
 import SingleItemCard from "./attributeItem";
 
 function ItemsCard() {

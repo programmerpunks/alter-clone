@@ -2,7 +2,7 @@ import Aos from "aos";
 import React, { useEffect } from "react";
 
 import Email from "./Email";
-import { Emails } from "./EmailLinks";
+import { Emails } from "../../content/footer";
 import logo from "../../images/footer/logo.svg";
 
 import "aos/dist/aos.css";

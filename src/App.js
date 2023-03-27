@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 import { toast } from "react-toastify";
 
 import "./App.css";
-import { ContractABI } from "./Components/mint/contract";
+import { ContractABI } from "../src/content/mint/contract";
 import Footer from "./Components/footer";
 import ItemsCard from "./Components/attribute";
 import LandingSection from "./Components/landing";

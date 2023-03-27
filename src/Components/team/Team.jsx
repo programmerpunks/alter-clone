@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 import SocialLinks from "./SocialLinks";
 import TeamCard from "./TeamCard";
-import { TeamMemberDetail } from "./TeamMemberDetails";
+import { TeamMemberDetail } from "../../content/team";
 
 const Team = ({ enableModal }) => {
   const members_with_image_display = TeamMemberDetail.slice(

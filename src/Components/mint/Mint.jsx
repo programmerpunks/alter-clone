@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 
-import { ContractABI } from "./contract";
+import { ContractABI } from "../../content/mint/contract";
 
 import "react-toastify/dist/ReactToastify.css";
 

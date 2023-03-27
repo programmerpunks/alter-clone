@@ -2,7 +2,7 @@ import Aos from "aos";
 import React, { useEffect } from "react";
 
 import ProjectCartItem from "./projectItem";
-import { ProjectDetails } from "./ProjectDetails";
+import { ProjectDetails } from "../../content/project";
 
 function Project() {
   useEffect(() => {

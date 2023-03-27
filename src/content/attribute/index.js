@@ -16,20 +16,20 @@ export const AttributeDetails = [
     secondHalfTitle: "Economy",
     img_url: item2,
     paragraph:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vitae quae dolorum veritatis quidem officiis, sequi qui autem voluptates tenetur!",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vitae quae dolorum veritatis quidem officiis, sequi qui autem voluptates tenetur!",
   },
   {
     firstHalfTitle: "Mobile Geolocation-Based",
     secondHalfTitle: "",
     img_url: item3,
     paragraph:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vitae quae dolorum veritatis quidem officiis, sequi qui autem voluptates tenetur!",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vitae quae dolorum veritatis quidem officiis, sequi qui autem voluptates tenetur!",
   },
   {
     firstHalfTitle: "Real World",
     secondHalfTitle: "Token Utility",
     img_url: item4,
     paragraph:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vitae quae dolorum veritatis quidem officiis, sequi qui autem voluptates tenetur!",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa vitae quae dolorum veritatis quidem officiis, sequi qui autem voluptates tenetur!",
   },
 ];

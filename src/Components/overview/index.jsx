@@ -1,7 +1,7 @@
 import Aos from "aos";
 import React, { useEffect } from "react";
 
-import { OverviewDetails } from "./OverviewDetails";
+import { OverviewDetails } from "../../content/overview";
 import SingleOverviewCartItem from "./overviewItem";
 
 function OverviewCard() {
