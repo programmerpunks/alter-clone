@@ -95,12 +95,9 @@ function Mint({
 
   return (
     <>
-      <div className="top-[10%] -left-[0px] z-20 lg:h-screen h-full w-full absolute object-center object-cover hidden md:block">
-        <img src={background} alt="/" />
-      </div>
-      <div className=" z-30 pt-28 pb-[0rem] relative">
-        <div className="flex justify-center">
-          <div className="bg-slate-300 bg-opacity-80 font-poppins rounded-[55px] px-20 py-10">
+      <div className="pt-28 pb-[0rem] relative">
+        <div className="flex justify-center mx-[20%] ">
+          <div className="bg-slate-300 bg-opacity-80 font-poppins rounded-[55px] p-7 flex flex-col justify-center mx-[20%] w-fit">
             <div className="flex justify-end ">
               <form
                 onSubmit={handleSubmit(onSubmit)}
@@ -109,7 +106,7 @@ function Mint({
                 <div class="">
                   <input
                     type="number"
-                    className=" text-black rounded-full focus:outline-none bg-white mt-2 p-3"
+                    className=" text-black rounded-full focus:outline-none bg-white mt-2 p-3 w-fit"
                     {...register("value", { required: true })}
                     defaultValue="0"
                   />

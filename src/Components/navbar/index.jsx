@@ -20,13 +20,14 @@ function Navbar({
   const handleNav = () => {
     setNav(!nav);
   };
+  console.log(window.location.pathname);
 
   return (
     <>
       <header className="text-black flex w-full backdrop-blur-[80px] h-24 items-center z-50 justify-between fixed">
         <div className="container max-w-full flex-wrap px-16 flex-col md:flex-row items-center flex ">
           <a
-            href="#header"
+            href="/"
             className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
           >
             <span className="ml-3 text-black text-xl">
@@ -34,26 +35,38 @@ function Navbar({
             </span>
           </a>
           <nav className="hidden lg:flex md:ml-auto  flex-wrap items-center text-xl font-poppins text-white">
-            <a href="#header" className="mr-5 hover:border-b-4 border-red-600 ">
+            <a
+              href={
+                window.location.pathname === "/mint"
+                  ? "/#overview "
+                  : "#overview"
+              }
+              className="mr-5 hover:border-b-4 border-red-600 "
+            >
               Overview
             </a>
-            <a href="/" className="mr-5 hover:border-b-4 border-red-600">
-              Trailer
+            <a href="/mint" className="mr-5 hover:border-b-4 border-red-600">
+              Mint
             </a>
-            <a href="#team" className="mr-5 hover:border-b-4 border-red-600">
+            <a
+              href={window.location.pathname === "/mint" ? "/#team  " : "#team"}
+              className="mr-5 hover:border-b-4 border-red-600"
+            >
               Team
             </a>
-            <a href="/" className="mr-5 hover:border-b-4 border-red-600">
-              Whitepaper
+            <a
+              href={
+                window.location.pathname === "/mint" ? "/#contact " : "#contact"
+              }
+              className="mr-5 hover:border-b-4 border-red-600"
+            >
+              Contact
             </a>
-            <a href="/" className="mr-5 hover:border-b-4 border-red-600">
-              Pitch Deck
-            </a>
-            <a href="/" className="mr-5 hover:border-b-4 border-red-600">
-              Marketplace
-            </a>
-            <a href="/" className="mr-5 hover:border-b-4 border-red-600">
-              Claim
+            <a
+              href={window.location.pathname === "/mint" ? "/#about" : "#about"}
+              className="mr-5 hover:border-b-4 border-red-600"
+            >
+              About Us
             </a>
             <button
               type="button"
@@ -94,13 +107,50 @@ function Navbar({
               </div>
             </div>
             <ul className="p-6 py-4 text-3xl font-extrabold text-white font-poppins">
-              <li className="my-10 border-b-4 border-red-600">Overview</li>
-              <li className="my-10">Trailer</li>
-              <li className="my-10">Team</li>
-              <li className="my-10">Whitepaper</li>
-              <li className="my-10">Pitch Deck</li>
-              <li className="my-10">Marketplace</li>
-              <li className="my-10">Claim</li>
+              <li className="my-10 ">
+                <a
+                  href={
+                    window.location.pathname === "/mint"
+                      ? "/#overview "
+                      : "#overview"
+                  }
+                >
+                  Overview
+                </a>
+              </li>
+              <li className="my-10">
+                <a href="/mint">Mint</a>
+              </li>
+              <li className="my-10">
+                <a
+                  href={
+                    window.location.pathname === "/mint" ? "/#team  " : "#team"
+                  }
+                >
+                  Team
+                </a>
+              </li>
+              <li className="my-10">
+                <a
+                  href={
+                    window.location.pathname === "/mint"
+                      ? "/#contact "
+                      : "#contact"
+                  }
+                >
+                  Contact
+                </a>
+              </li>
+              <li className="my-10">
+                {" "}
+                <a
+                  href={
+                    window.location.pathname === "/mint" ? "/#about" : "#about"
+                  }
+                >
+                  About Us
+                </a>
+              </li>
               <button
                 type="button"
                 className="w-full text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium text-lg rounded-[55px] px-16 py-5 text-center  duration-700 hover:scale-110"

@@ -11,7 +11,7 @@ function Project() {
   return (
     <>
       <section
-        className="overflow-hidden relative  mt-40 flex justify-center bg-incoming incoming_bg"
+        className="overflow-hidden relative mt-40 flex justify-center bg-incoming incoming_bg"
         data-aos="fade-up"
       >
         <div className="container">

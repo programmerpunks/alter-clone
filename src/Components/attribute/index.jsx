@@ -15,6 +15,7 @@ function ItemsCard() {
       <section
         className="section overflow-hidden relative flex justify-center"
         data-aos="fade-up"
+        id="about"
       >
         <div>
           <h4 className="lg:mb-28 mb-12 mt-28 2xl:text-[80px] md:text-4xl text-white lg:text-5xl text-3xl font-bold text-center font-poppins ">

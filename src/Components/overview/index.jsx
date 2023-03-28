@@ -14,6 +14,7 @@ function OverviewCard() {
       <div
         className="flex justify-center mt-20  bg-cosmic cosmic_bg p-10"
         data-aos="fade-up"
+        id="overview"
       >
         <section className="p-20 overflow-hidden relative bg-slate-300 bg-opacity-30 rounded-[55px] mt-20 flex justify-center">
           <div className="container">

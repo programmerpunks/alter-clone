@@ -19,6 +19,7 @@ import { TeamModal } from "./Components/team";
 import VideoCard from "./Components/video";
 
 import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from "react";
 
 function App() {
   const [images, setImages] = useState([]);
@@ -91,6 +92,10 @@ function App() {
       toastId: "custom-id-yes",
     });
   };
+
+  useEffect(() => {
+    connection();
+  }, []);
 
   const readContract = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
