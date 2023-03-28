@@ -95,37 +95,39 @@ function Mint({
 
   return (
     <>
-      <div className="pt-28 pb-[0rem] relative">
-        <div className="flex justify-center mx-[20%] ">
-          <div className="bg-slate-300 bg-opacity-80 font-poppins rounded-[55px] p-7 flex flex-col justify-center mx-[20%] w-fit">
-            <div className="flex justify-end ">
+      <div className="pt-28 pb-[0rem]">
+        <div className="flex justify-center">
+          <div className="bg-slate-300 bg-opacity-80 font-poppins rounded-[55px] p-7 justify-center max-w-[700px]">
+            <div className="flex justify">
               <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex justify-center"
               >
-                <div class="">
+                <div className="flex">
                   <input
                     type="number"
-                    className=" text-black rounded-full focus:outline-none bg-white mt-2 p-3 w-fit"
+                    className="text-black rounded-full outline-none bg-white mt-2 w-3/4"
                     {...register("value", { required: true })}
                     defaultValue="0"
                   />
+                  <div className="w-1/4">
+                    <button className="text-white h-[45px] mt-2 bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium text-md rounded-[55px] px-5 mx-5  text-center  duration-700 hover:scale-110">
+                      Mint
+                    </button>
+                  </div>
                 </div>
-                <button className="text-white h-[45px] mt-2 bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium text-md rounded-[55px] px-5 mx-5  text-center  duration-700 hover:scale-110">
-                  Mint
-                </button>
               </form>
             </div>
-            <h4 className="text-white text-center pt-5 font-bold text-3xl">
+            <h4 className="text-white text-center pt-5 font-bold text-lg md:text-3xl">
               Total Minted: {userMintedAmount}
             </h4>
-            <h4 className="text-white text-center font-bold text-3xl">
+            <h4 className="text-white text-center font-bold text-lg md:text-3xl">
               Maximum Minted: {maxMintAmount}
             </h4>
-            <h4 className="text-white text-center font-bold text-3xl">
+            <h4 className="text-white text-center font-bold text-lg md:text-3xl">
               Price: {price} eth
             </h4>
-            <h4 className="text-white text-center font-bold text-3xl">
+            <h4 className="text-white text-center font-bold text-lg md:text-3xl">
               Remaining minting:{maxMintAmount - userMintedAmount}
             </h4>
           </div>
