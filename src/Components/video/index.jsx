@@ -17,8 +17,8 @@ function VideoCard() {
         className="flex justify-center bg-universe-foreground bg-no-repeat fade_bg"
         data-aos="fade-up"
       >
-        <section className="relative bg-slate-300 rounded-[55px] bg-opacity-30 w-2/3">
-          <div className="rounded-large container-fluid m-4 mt-5 p-10">
+        <section className="relative bg-slate-300 rounded-[55px] bg-opacity-30 sm:w-2/3 pb-5 sm:pb-0">
+          <div className="rounded-large container-fluid sm:m-4 mt-5 sm:p-10">
             <h4 className="2xl:text-[80px] md:text-4xl lg:text-5xl text-3xl font-bold text-center text-white mb-5 font-poppins">
               Video
             </h4>

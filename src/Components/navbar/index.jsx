@@ -20,7 +20,6 @@ function Navbar({
   const handleNav = () => {
     setNav(!nav);
   };
-  console.log(window.location.pathname);
 
   return (
     <>

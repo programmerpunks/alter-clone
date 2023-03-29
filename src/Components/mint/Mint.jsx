@@ -97,7 +97,7 @@ function Mint({
     <>
       <div className="pt-28 pb-[0rem]">
         <div className="flex justify-center">
-          <div className="bg-slate-300 bg-opacity-80 font-poppins rounded-[55px] p-7 justify-center max-w-[700px]">
+          <div className="bg-[#80458C] bg-opacity-80 font-poppins rounded-[55px] p-7 justify-center max-w-[700px]">
             <div className="flex justify">
               <form
                 onSubmit={handleSubmit(onSubmit)}
@@ -106,9 +106,10 @@ function Mint({
                 <div className="flex">
                   <input
                     type="number"
-                    className="text-black rounded-full outline-none bg-white mt-2 w-3/4"
+                    min="1"
+                    className="text-black rounded-full outline-none bg-white mt-2 w-3/4 p-2"
                     {...register("value", { required: true })}
-                    defaultValue="0"
+                    defaultValue="1"
                   />
                   <div className="w-1/4">
                     <button className="text-white h-[45px] mt-2 bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium text-md rounded-[55px] px-5 mx-5  text-center  duration-700 hover:scale-110">
@@ -118,18 +119,20 @@ function Mint({
                 </div>
               </form>
             </div>
-            <h4 className="text-white text-center pt-5 font-bold text-lg md:text-3xl">
-              Total Minted: {userMintedAmount}
-            </h4>
-            <h4 className="text-white text-center font-bold text-lg md:text-3xl">
-              Maximum Minted: {maxMintAmount}
-            </h4>
-            <h4 className="text-white text-center font-bold text-lg md:text-3xl">
-              Price: {price} eth
-            </h4>
-            <h4 className="text-white text-center font-bold text-lg md:text-3xl">
-              Remaining minting:{maxMintAmount - userMintedAmount}
-            </h4>
+            <div className="pl-2">
+              <h4 className="text-white text-start pt-5 font-bold text-lg md:text-xl">
+                Total Minted: {userMintedAmount}
+              </h4>
+              <h4 className="text-white text-start font-bold text-lg md:text-xl">
+                Maximum Minted: {maxMintAmount}
+              </h4>
+              <h4 className="text-white text-start font-bold text-lg md:text-xl">
+                Price: {price} eth
+              </h4>
+              <h4 className="text-white text-start font-bold text-lg md:text-xl">
+                Remaining minting:{maxMintAmount - userMintedAmount}
+              </h4>
+            </div>
           </div>
         </div>
         <div className="text-white justify-center px-10 py-10 grid text-center lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
