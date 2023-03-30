@@ -12,7 +12,7 @@ function OverviewCard() {
   return (
     <>
       <div
-        className="flex justify-center mt-20 bg-cosmic cosmic_bg p-10"
+        className="flex justify-center mt-20 bg-cosmic cosmic_bg py-10 sm:p-10"
         data-aos="fade-up"
         id="overview"
       >
