@@ -150,12 +150,28 @@ function Navbar({
                   About Us
                 </a>
               </li>
-              <button
-                type="button"
-                className="w-full text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium text-lg rounded-[55px] px-16 py-5 text-center  duration-700 hover:scale-110"
-              >
-                Buy Land
-              </button>
+              <li className="flex justify-center">
+                <button
+                  type="button"
+                  className={`w-[90%] px-auto text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl hover:content-['Hello'] focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium text-lg rounded-[55px] px-2 py-5 text-center  duration-700 hover:scale-110 ${
+                    logout ? "hover:before:content-['Disconnect:\\_']" : ""
+                  }`}
+                  onClick={() => {
+                    logout
+                    ? (async function () {
+                          await disconnect();
+                        })()
+                      : (async function () {
+                          await connection();
+                          await readContract();
+                          await getTokens();
+                          navigate("/mint");
+                        })();
+                      }}
+                      >
+                  {wallet}
+                </button>
+              </li>
             </ul>
           </div>
         </header>
